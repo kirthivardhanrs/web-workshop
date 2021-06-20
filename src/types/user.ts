@@ -1,6 +1,6 @@
 export class User {
-  login!: string
+  description!: string
   id!: number
-  public_repos!: number
-  followers!: number
+  full_name!: string
+  two_factor_grace_period!: number
 }
