@@ -1,4 +1,6 @@
+  
 export class Repo {
   name!: string
-  star_count!: number
+  stargazers_count!: number
+  size!: number
 }

@@ -1,12 +1,12 @@
 import {User} from "@/types/user";
 import {Repo} from "@/types/repo";
 
-export async function getUser(groupid: string): Promise<User> {
+export async function getUser(username: string): Promise<User> {
   return await (await fetch(
-    "https://gitlab.com/api/v4/groups/" + groupid)).json();
+    "https://api.github.com/users/" + username)).json();
 }
 
-export async function getRepos(groupid: string): Promise<Repo[]> {
+export async function getRepos(username: string): Promise<Repo[]> {
   return await (await fetch(
-    `https://gitlab.com/api/v4/groups/${groupid}/projects`)).json();
+    `https://api.github.com/users/${username}/repos`)).json();
 }
